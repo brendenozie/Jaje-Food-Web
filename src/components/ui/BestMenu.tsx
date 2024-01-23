@@ -28,11 +28,11 @@ const BestMenu = () => {
     <section
       id="destinations"
       data-testid="destinations"
-      className="flex flex-col bg-gray-200 justify-center items-center"
+      className="flex flex-col bg-white justify-center items-center"
     >
       <div className="min-h-[4.5rem] items-center pt-4">
             <h1 className="relative my-4 mx-2 text-xl font-semibold text-primary uppercase w-full text-center font-poppins">Best Food Menu</h1>            
-            <h2 className="relative my-4 mx-2 text-9xl font-bold text-gray-300 uppercase w-full text-center font-poppins">Our Best Foods Menu</h2>
+            <h2 className="relative my-4 mx-2 text-3xl font-bold text-[#B10120] uppercase w-full text-center font-poppins">Our Best Foods Menu</h2>
       </div>
 
       <div className="mt-16 grid border divide-x divide-y rounded-xl overflow-hidden sm:grid-cols-2 lg:divide-y-0 lg:grid-cols-5 xl:grid-cols-5 text-center object-center items-center justify-items-center max-w-5xl ">
@@ -83,8 +83,8 @@ const BestMenu = () => {
             </div>
         </div>
 
-      <div className=" grid sm:grid-cols-2 gap-x-4 justify-center items-center h-[100vh] max-w-6xl justify-self-center place-items-center">
-            <div className="relative flex flex-col items-center rounded-md border-[1px] border-gray-200 w-[576px] mx-auto bg-white bg-clip-border border-[#23232333] dark:!bg-navy-800 dark:text-white ">
+      <div className=" grid sm:grid-cols-2 gap-x-2 justify-center items-center h-[80vh] max-w-4xl justify-self-center place-items-center">
+            <div className="relative flex flex-col items-center rounded-md border-[1px] border-gray-200 md:w-[441px] w-[576px] mx-auto bg-white bg-clip-border border-[#23232333] dark:!bg-navy-800 dark:text-white ">
                 <div className="flex h-full w-full items-start justify-between rounded-md border-b-[1px]  dark:border-white/20 bg-white px-3 py-[20px] transition-all duration-150 border-gray-200 dark:!bg-navy-800 dark:hover:!bg-navy-700">
                     <div className="flex items-center gap-3">
                         <div className="flex h-16 w-16 items-center justify-center">
@@ -201,11 +201,7 @@ const BestMenu = () => {
                 <div className="flex h-full w-full items-start justify-between rounded-md border-b-[1px]  dark:border-white/20 bg-white px-3 py-[20px] transition-all duration-150 border-gray-200 dark:!bg-navy-800 dark:hover:!bg-navy-700">
                     <div className="flex items-center gap-3">
                         <div className="flex h-16 w-16 items-center justify-center">
-                        <img
-                            className="h-full w-full rounded-full"
-                            src="/80691.jpg"
-                            alt=""
-                        />
+                        <img className="h-full w-full rounded-full" src="/80691.jpg" alt=""/>
                         </div>
                         <div className="flex flex-col">
                         <h5 className="text-base font-bold text-navy-700 dark:text-white">

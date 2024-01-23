@@ -21,23 +21,23 @@ const Second = () => {
           <div className="flex flex-wrap gap-y-6 gap-x-6 justify-center">
             <div className="flex flex-col gap-y-10 md:w-[45%] box-border">
               <div className="flex flex-col gap-y-6">
-                <h2 className="text-3xl font-bold text-gray-100 md:text-4xl lg:text-5xl ">
+                <h2 className="text-3xl font-bold text-white md:text-4xl lg:text-5xl ">
                   WHERE QUALITY FOOD MEETS EXCELLENT SERVICE
                 </h2>
-                <p className="lg:text-lg text-gray-100">
+                <p className="lg:text-lg text-white">
                 Its the perfect dining experience where every dish is crafted with fresh,high quality ingredientsand served by friendly staff who go the extra mile to ensure seemless service.
                 </p>
               </div>
               <div className="flex gap-x-4">
                 <Link
                   href="#"
-                  className="px-4 py-[0.6rem] py-3 px-6 bg-gray-700 text-gray-100 hover:bg-gray-800 transition-all duration-300"
+                  className="px-4 py-[0.6rem] py-3 px-6 bg-gray-700 text-white hover:bg-gray-800 transition-all duration-300"
                 >
                   Discover awesome places
                 </Link>
                 <Link
                   href=""
-                  className="px-4 py-[0.6rem] py-3 px-6 border-[1px] text-gray-100 border-gray-400 hover:border-gray-800 border-opacity-40 hover:border-opacity-100 transition-all duration-200"
+                  className="px-4 py-[0.6rem] py-3 px-6 border-[1px] text-white border-gray-400 hover:border-gray-800 border-opacity-40 hover:border-opacity-100 transition-all duration-200"
                 >
                   View our packages
                 </Link>
@@ -46,7 +46,7 @@ const Second = () => {
                 <p>
                   Interested in Travel to be your travel companion on your special
                   moment? Get in touch with our team at{" "}
-                  <Link href="$contact" className="text-gray-100 underline">
+                  <Link href="$contact" className="text-white underline">
                     jajemelo@gmail.com
                   </Link>
                 </p>
@@ -55,7 +55,7 @@ const Second = () => {
             {/* image */}
             <div className="w-full md:w-[45%]  box-border">
               <div className="bg-[url('/80691.jpg')] h-[20rem] w-full bg-cover bg-center shadow-2xl sm:h-3/4 lg:h-[100%]  relative">
-                <div className="absolute -bottom-4 -right-4 shadow-2xl border-8 border-gray-200">
+                <div className="absolute -bottom-4 md:-right-4 sm:right-0 shadow-2xl border-8 border-gray-200">
                   <Image src={"/80691.jpg"} alt="" width={200} height={50} />
                 </div>
               </div>
@@ -66,28 +66,28 @@ const Second = () => {
               <div className="flex items-start gap-x-3">
                 <GlobeAsiaAustraliaIcon className="h-30 text-white" />
                 <div>
-                  <h3 className="text-3xl sm:text-[2rem] leading-8 font-bold text-gray-100 text-4xl">
+                  <h3 className="text-3xl sm:text-[2rem] leading-8 font-bold text-white text-4xl">
                     1.4M
                   </h3>
-                  <p className="text-gray-100">travellers month</p>
+                  <p className="text-white">travellers month</p>
                 </div>
               </div>
               <div className="flex items-start gap-x-3">
                 <UserGroupIcon className="h-30 text-white" />
                 <div>
-                  <h3 className="text-3xl sm:text-[2rem] leading-8 font-bold text-gray-100 text-4xl">
+                  <h3 className="text-3xl sm:text-[2rem] leading-8 font-bold text-white text-4xl">
                     4.9M
                   </h3>
-                  <p className="text-gray-100">honest reviews</p>
+                  <p className="text-white">honest reviews</p>
                 </div>
               </div>
               <div className="flex items-start gap-x-3">
                 <WindowIcon className="h-30 text-white" />
                 <div>
-                  <h3 className="text-3xl sm:text-[2rem] leading-8 font-bold text-gray-100 text-4xl">
+                  <h3 className="text-3xl sm:text-[2rem] leading-8 font-bold text-white text-4xl">
                   329k
                   </h3>
-                  <p className="text-gray-100">honest reviews</p>
+                  <p className="text-white">honest reviews</p>
                 </div>
               </div>
             </div>

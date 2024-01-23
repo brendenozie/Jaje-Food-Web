@@ -10,20 +10,20 @@ export default function Hero() {
       <div className="bg-transparent relative dark:bg-gray-900">
         <div className="relative pt-2 pb-12 lg:pt-12 xl:container m-auto px-4 md:px-10 lg:px-4 lg:flex">
             <div className="sm:w-2/12 md:w-1/3 lg:ml-0 sm:mx-auto text-center lg:text-center lg:mr-auto lg:w-2/12">
-              <div className="space-y-8	h-96 justify-between border-e border-gray-500">
-                <p className="text-sm text-center font-bold  text-primary dark:text-gray-300 hover:text-primary uppercase font-poppins">Menu</p>
-                <p className="text-sm text-center font-bold text-gray-300  dark:text-gray-300  hover:text-primary uppercase font-poppins">Catering Menu</p>
-                <p className="text-sm text-center font-bold text-gray-300  dark:text-gray-300  hover:text-primary uppercase font-poppins">Order Catering</p>
-                <p className="text-sm text-center font-bold text-gray-300  dark:text-gray-300  hover:text-primary uppercase font-poppins">Order Online</p>
-                <p className="text-sm text-center font-bold text-gray-300  dark:text-gray-300  hover:text-primary uppercase font-poppins">Locations</p>
+              <div className="space-y-8	h-96 justify-between border-e dark:border-gray-500 border-white ">
+                <p className="text-sm text-center font-bold text-[#991E25] hover:text-white dark:primary hover:dark:text-primary uppercase font-poppins">Menu</p>
+                <p className="text-sm text-center font-bold text-white hover:text-[#991E25] dark:text-gray-300  hover:dark:text-primary uppercase font-poppins">Catering Menu</p>
+                <p className="text-sm text-center font-bold text-white hover:text-[#991E25] dark:text-gray-300  hover:dark:text-primary uppercase font-poppins">Order Catering</p>
+                <p className="text-sm text-center font-bold text-white hover:text-[#991E25] dark:text-gray-300  hover:dark:text-primary uppercase font-poppins">Order Online</p>
+                <p className="text-sm text-center font-bold text-white hover:text-[#991E25] dark:text-gray-300  hover:dark:text-primary uppercase font-poppins">Locations</p>
               </div>
             </div>
             <div className="relative justify-between sm:w-8/12 md:w-2/3 lg:ml-0 sm:mx-2 text-center lg:text-center lg:mr-auto lg:w-5/12">
               <div className="relative mt-4 md:mt-14 mb-4 md:mb-14 space-y-8 lg:ml-0 sm:mx-auto text-center lg:text-center lg:mr-auto font-poppins">
                 <h1 className="sm:mx-auto sm:w-9/12 md:w-2/3 font-black text-white text-4xl text-center sm:text-5xl md:text-6xl lg:w-auto lg:text-center xl:text-7xl dark:text-white uppercase">
-                <span className="relative text-primary bg-clip-text dark:text-primary">More</span> than
+                <span className="relative text-[#B10120] bg-clip-text dark:text-primary">More</span> than
                 <br className="lg:block hidden"/>just Pizza</h1>
-                <p className="text-base tracking-wide font-bold text-gray-300 text-center sm:mx-auto sm:w-9/12 md:w-2/3 dark:text-gray-300 uppercase font-poppins">
+                <p className="text-base tracking-wide font-bold text-white dark:text-gray-300 text-center sm:mx-auto sm:w-9/12 md:w-2/3 dark:text-gray-300 uppercase font-poppins">
                     Our menu has something for everyone. Stop by for a quick bite or get your favorites delivered right to your door.
                 </p>
               </div>

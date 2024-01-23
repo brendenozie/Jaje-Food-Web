@@ -1,8 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-
-import {FolderIcon, BookmarkIcon } from "@heroicons/react/24/solid";
 
 interface cardProps {
   src: string;
@@ -19,8 +15,8 @@ const Picard = ({ src, title, desc }: cardProps) => {
       <div className="flex min-h-80 items-center rounded-xl bg-hero-pattern w-80 h-80 justify-center">
         <div className="mx-auto px-5">
           <div className="max-w-xs cursor-pointer rounded-lg bg-transparent p-2 shadow  duration-150 hover:scale-105 hover:shadow-md justify-center items-center ">
-            <img className="relative -top-10 w-60 h-60 rounded-full p-4 bg-white object-cover object-center" src={src} alt="product" />
-            <p className="relative mb-4 mx-2 text-lg font-semibold text-primary uppercase w-full text-center flex place-items-baseline">{title}</p>
+            <img className="relative -top-10 w-60 h-60 rounded-full p-4 bg-gray-100 object-cover object-center" src={src} alt="product" />
+            <p className="relative mb-4 mx-2 text-lg font-semibold text-white uppercase w-full text-center flex place-items-baseline">{title}</p>
           </div>
         </div>
       </div>    

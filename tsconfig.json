@@ -29,7 +29,7 @@
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx", "src/app/api/category/[id]/route.js", "src/libs/SessionProvider.jsx" ],
+    "**/*.tsx", "src/app/api/category/[id]/route.js", "src/libs/SessionProvider.jsx", "src/app/api/login/route.js" ],
   "exclude": [
     "node_modules"
   ]

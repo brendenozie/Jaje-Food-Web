@@ -30,11 +30,11 @@ export default async function RootLayout({ children }) {
   //const session = await getServerSession();
 
   return (
-    <html lang="en" className="bg-hero-pattern bg-cover scroll-smooth" suppressHydrationWarning={true}>
+    <html lang="en" className="bg-primary dark:bg-hero-pattern bg-cover scroll-smooth" suppressHydrationWarning={true}>
       <body className={`${roboto.className} ${poppins.variable} ${lemon.variable}`}
       >
         <SessionProvider >
-          <main className="mx-auto py-4 px-2">
+          <main className="mx-auto py-4  font-poppins">
             <Providers>
               <Heeader />
               {children}

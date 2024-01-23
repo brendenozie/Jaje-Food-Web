@@ -31,15 +31,15 @@ export default function Heeader() {
 
   return (
     <header className="flex items-center justify-between font-poppins font-xl">
-      <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-transparent">
+      <Navbar onMenuOpenChange={setIsMenuOpen} className="backdrop-saturate-100 backdrop-blur-0 bg-transparent">
         <NavbarContent>
           <NavbarMenuToggle
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            className="sm:hidden"
+            className="sm:hidden text-white"
           />
           <NavbarBrand>
             <Link
-              className="text-primary font-semibold text-2xl"
+              className="text-white dark:text-primary font-semibold text-2xl"
               href="/"
             >
               <img className="w-30 h-24 text-white" src={"/loo.png"} alt="chat logo" loading="lazy" width="128" height="128"/>
@@ -56,7 +56,7 @@ export default function Heeader() {
               <Link
                 color="foreground"
                 href={item.href}
-                className="font-extrabold text-white hover:text-primary duration-150 ease-in-out"
+                className="font-extrabold text-white dark:hover:text-primary duration-150 ease-in-out"
               >
                 {item.title}
               </Link>

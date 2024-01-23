@@ -28,10 +28,10 @@ const Pic = () => {
     <section
       id="destinations"
       data-testid="destinations"
-      className="flex flex-col bg-gray-200 h-[42rem] justify-center"
+      className="flex flex-col bg-white h-[42rem] justify-center"
     >
       <div className="min-h-[4.5rem] items-center">
-            <h1 className="relative my-4 mx-2 text-9xl font-semibold text-gray-100 uppercase w-full text-left">Our Menu</h1>
+            <h1 className="relative my-4 mx-2 text-9xl font-bold text-[#B10120] uppercase w-full text-left">Our Menu</h1>
       </div>
       <div className="relative">
         <div
@@ -61,7 +61,7 @@ const Pic = () => {
         </button>
       </div>
       <div className="min-h-[4.5rem] items-center">
-            <h1 className="relative my-6 mx-2 text-9xl font-semibold text-gray-300 uppercase w-full text-right">Our Menu</h1>
+            <h1 className="relative my-6 mx-2 text-9xl font-semibold text-primary uppercase w-full text-right">Our Menu</h1>
       </div>
     </section>
   );

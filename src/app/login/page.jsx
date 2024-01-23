@@ -14,6 +14,7 @@ import Link from "next/link";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
+
 export default function LoginPage() {
   const router = useRouter();
   const [isVisible, setIsVisible] = useState(false);
@@ -45,7 +46,7 @@ export default function LoginPage() {
         redirect: false,
       });
       if (res?.error) {
-        toast.error("Invalid email or password");
+        toast.error(`Invalid email or password ${res?.error}`);
         if (res?.url) router.replace("/");
       } else {
         router.push("/");

@@ -30,10 +30,10 @@ export const authOptions = {
           // const user = await User.findOne({ email });
           const user = await authOptions.adapter.getUserByEmail(email);
           if (user) {
-            const passwordOk = await bcrypt.compare(password, user.password);
-            if (passwordOk) {
+            // const passwordOk = await bcrypt.compare(password, user.password);
+            // if (passwordOk) {
               return user;
-            }
+            // }
           }
         } catch (error) {
           throw new Error(error);

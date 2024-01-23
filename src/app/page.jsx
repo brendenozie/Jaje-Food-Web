@@ -20,13 +20,7 @@ export default function Home() {
       <Team/>
       <PlayStore/>
       <Reserve/>
-      {/* <HomeMenu /> */}      
-      {/* <div id="about">
-        <AboutUs />
-      </div>
-      <div id="contact">
-        <ContactUs />
-      </div> */}
+      
     </>
   );
 }

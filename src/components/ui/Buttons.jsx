@@ -31,17 +31,17 @@ export default function Buttons() {
           <div className="flex gap-3 items-center">
             <Link
               href={"/profile"}
-              className="text-xl font-bold text-green-900"
+              className="flex flex-row text-xl font-bold text-white dark:text-primary items-end"
             >
-              Hello, <span className="underline">{userName}</span>
+              Hello,
+
+                <Avatar
+                  color={"primary"}
+                  isBordered
+                  src={userImage ? userImage : "/profile.png"}
+                />
+
             </Link>
-
-            <Avatar
-              color={"primary"}
-              isBordered
-              src={userImage ? userImage : "/profile.png"}
-            />
-
             <Button
               as={Link}
               color="secondary"
@@ -55,10 +55,10 @@ export default function Buttons() {
         </div>
       ) : (
         <div className="flex gap-3">
-          <Button as={Link} color="secondary" href="/register" variant="flat">
+          <Button as={Link} className="text-white dark:secondary" href="/register" variant="flat">
             Sign Up
           </Button>
-          <Button as={Link} color="primary" href="/login" variant="flat">
+          <Button as={Link} className="text-white dark:primary" href="/login" variant="flat">
             Sign In
           </Button>
         </div>
