@@ -60,3 +60,21 @@ export async function DELETE(req) {
   }
 }
 
+export async function GET(req) {
+  try {
+    const id = req.url.split("/").pop();
+    await mongoose.connect(process.env.NEXT_PUBLIC_MONGO_URL);
+
+    const foundMenuItem = await MenuItem.findOne({ _id: id }).populate("category");
+
+    return NextResponse.json(foundMenuItem,
+      { message: "Menu item found successfully" },
+      { status: 200 }
+    );
+  } catch (error) {
+    return NextResponse.json(
+      { message: "Internal Server Error" },
+      { status: 500 }
+    );
+  }
+}

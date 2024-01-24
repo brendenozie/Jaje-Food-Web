@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Right from "../icons/Right";
 import { useRouter } from "next/navigation";
+import {motion} from "framer-motion";
 
 export default function Hero() {
   const router = useRouter();
@@ -20,12 +21,14 @@ export default function Hero() {
             </div>
             <div className="relative justify-between sm:w-8/12 md:w-2/3 lg:ml-0 sm:mx-2 text-center lg:text-center lg:mr-auto lg:w-5/12">
               <div className="relative mt-4 md:mt-14 mb-4 md:mb-14 space-y-8 lg:ml-0 sm:mx-auto text-center lg:text-center lg:mr-auto font-poppins">
-                <h1 className="sm:mx-auto sm:w-9/12 md:w-2/3 font-black text-white text-4xl text-center sm:text-5xl md:text-6xl lg:w-auto lg:text-center xl:text-7xl dark:text-white uppercase">
+              <motion.h1  className="sm:mx-auto sm:w-9/12 md:w-2/3 font-black text-white text-4xl text-center sm:text-5xl md:text-6xl lg:w-auto lg:text-center xl:text-7xl dark:text-white uppercase"  whileHover={{ scale: 1.2 }}      >
+              
                 <span className="relative text-[#B10120] bg-clip-text dark:text-primary">More</span> than
-                <br className="lg:block hidden"/>just Pizza</h1>
+                <br className="lg:block hidden"/>just Pizza</motion.h1>
                 <p className="text-base tracking-wide font-bold text-white dark:text-gray-300 text-center sm:mx-auto sm:w-9/12 md:w-2/3 dark:text-gray-300 uppercase font-poppins">
                     Our menu has something for everyone. Stop by for a quick bite or get your favorites delivered right to your door.
                 </p>
+                
               </div>
                 
                 <div className="grid grid-cols-3 space-x-4 md:space-x-6 md:flex md:justify-center lg:justify-center">
@@ -43,15 +46,17 @@ export default function Hero() {
                     </a>     
                 </div>
             </div>
-            <div className="mt-12 md:mt-0 lg:relative -right-2 lg:w-5/12 flex w-full h-[35rem] overflow-clip">
+            <div className="mt-12 md:mt-0 lg:relative -right-2 lg:w-5/12 flex w-full h-[35rem] ">
                     {/* <div aria-hidden="true" className="absolute scale-75 md:scale-110 inset-0 m-auto w-full h-full md:w-96 md:h-96 rounded-full rotate-45 bg-gradient-to-r from-sky-500 to-cyan-300 blur-3xl"></div> */}
-                    <img src={"/pizza.png"} className="object-contain h-auto w-full" alt="wath illustration" loading="lazy" width="320" height="280"/>
                     {/* <Image className="relative w-full"
                             src={"/halfpizza.png"}
                             layout={"fill"}
                             objectFit={"contain"}
                             alt={"salad"}
                           /> */}
+            <motion.h1    whileHover={{ scale: 1.2 }}      >
+                      <img src={"/pizza.png"} className="object-contain h-auto w-full" alt="wath illustration" loading="lazy" width="320" height="280"/>
+            </motion.h1>
             </div>
         </div>
     </div>
