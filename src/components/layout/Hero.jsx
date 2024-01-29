@@ -10,13 +10,13 @@ export default function Hero() {
     <section className="hero mt-4 font-poppins">
       <div className="bg-transparent relative dark:bg-gray-900">
         <div className="relative pt-2 pb-12 lg:pt-12 xl:container m-auto px-4 md:px-10 lg:px-4 lg:flex">
-            <div className="sm:w-2/12 md:w-1/3 lg:ml-0 sm:mx-auto text-center lg:text-center lg:mr-auto lg:w-2/12">
-              <div className="space-y-8	h-96 justify-between border-e dark:border-gray-500 border-white ">
-                <p className="text-sm text-center hover:cursor-pointer font-bold text-[#991E25] hover:text-white dark:primary hover:dark:text-primary uppercase font-poppins">Menu</p>
-                <p className="text-sm text-center hover:cursor-pointer font-bold text-white hover:text-[#991E25] dark:text-gray-300  hover:dark:text-primary uppercase font-poppins">Catering Menu</p>
-                <p className="text-sm text-center hover:cursor-pointer font-bold text-white hover:text-[#991E25] dark:text-gray-300  hover:dark:text-primary uppercase font-poppins">Order Catering</p>
-                <p className="text-sm text-center hover:cursor-pointer font-bold text-white hover:text-[#991E25] dark:text-gray-300  hover:dark:text-primary uppercase font-poppins">Order Online</p>
-                <p className="text-sm text-center hover:cursor-pointer font-bold text-white hover:text-[#991E25] dark:text-gray-300  hover:dark:text-primary uppercase font-poppins">Locations</p>
+            <div className="sm:w-2/12 md:w-1/3  lg:ml-0 sm:mx-auto text-center lg:text-center lg:mr-auto lg:w-2/12">
+              <div className="flex flex-col space-y-8	h-96 cursor-pointer justify-between border-e dark:border-gray-500 border-white ">
+                <p className="text-sm text-center cursor-pointer font-bold text-[#991E25] hover:text-white dark:primary hover:dark:text-primary uppercase font-poppins">Menu</p>
+                <p className="text-sm text-center cursor-pointer font-bold text-white hover:text-[#991E25] dark:text-gray-300  hover:dark:text-primary uppercase font-poppins">Catering Menu</p>
+                <p className="text-sm text-center cursor-pointer font-bold text-white hover:text-[#991E25] dark:text-gray-300  hover:dark:text-primary uppercase font-poppins">Order Catering</p>
+                <p className="text-sm text-center cursor-pointer font-bold text-white hover:text-[#991E25] dark:text-gray-300  hover:dark:text-primary uppercase font-poppins">Order Online</p>
+                <p className="text-sm text-center cursor-pointer font-bold text-white hover:text-[#991E25] dark:text-gray-300  hover:dark:text-primary uppercase font-poppins">Locations</p>
               </div>
             </div>
             <div className="relative justify-between sm:w-8/12 md:w-2/3 lg:ml-0 sm:mx-2 text-center lg:text-center lg:mr-auto lg:w-5/12">
