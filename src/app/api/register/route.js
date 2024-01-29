@@ -5,7 +5,10 @@ import { NextResponse } from "next/server";
 
 export async function POST(req) {
   try {
-    const { email, password } = await req.json();
+    const { data } = await req.json();
+
+    const { email, password, ...body } = await data;
+    
     mongoose.connect(process.env.NEXT_PUBLIC_MONGO_URL);
 
     if (!email) {
@@ -16,14 +19,13 @@ export async function POST(req) {
     }
 
     if (!password?.length || password.length < 8) {
-      // new Error("password must be at least 8 characters");
       return NextResponse.json(
         { message: "password must be at least 8 characters" },
         { status: 400 }
       );
     }
 
-    const existingUser = await User.findOne({ email }); //email:email
+    const existingUser = await User.findOne({ email });
     if (existingUser) {
       return NextResponse.json({ message: "Email is taken" }, { status: 400 });
     }
@@ -33,6 +35,7 @@ export async function POST(req) {
     const createdUser = await new User({
       email,
       password: hashedPassword,
+      body
     }).save();
 
     return NextResponse.json(createdUser, { status: 201 });

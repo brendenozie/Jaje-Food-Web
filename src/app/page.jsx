@@ -19,8 +19,7 @@ export default function Home() {
       <Second/>
       <Team/>
       <PlayStore/>
-      <Reserve/>
-      
+      <Reserve/>      
     </>
   );
 }
