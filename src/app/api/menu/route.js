@@ -53,7 +53,7 @@ export async function GET() {
   try {
     mongoose.connect(process.env.NEXT_PUBLIC_MONGO_URL);
     const menu_items = await MenuItem.find().populate("category");
-    return NextResponse.json(menu_items, { status: 200 });
+    return NextResponse.json({results: menu_items}, { status: 200 });
   } catch (error) {
     return NextResponse.json(
       { message: "Something went wrong" },

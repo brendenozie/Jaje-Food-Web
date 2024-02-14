@@ -334,7 +334,7 @@ export default function Menu() {
               {/* < />!-- Tab Menu --> */}
               <div className="flex flex-wrap items-center overflow-x-auto overflow-y-hidden py-10 justify-center bg-white text-gray-800">
                       <div className="mt-8 grid border divide-x divide-y rounded-xl overflow-hidden sm:grid-cols-2 lg:divide-y-0 lg:grid-cols-5 xl:grid-cols-5 text-center object-center items-center justify-items-center max-w-5xl ">
-                      {categories?.length > 0 &&  categories.map((c) => (
+                      {categories.results?.length > 0 &&  categories.map((c) => (
                           <div className="relative group transition hover:z-[1] hover:shadow-2xl w-full" key={c._id}>
                               <div className="relative p-2 space-y-2  flex flex-col items-center   border-dashed rounded-lg transition duration-300 group-hover:bg-white group-hover:border group-hover:scale-90 ">
                                   <img src={c.image} className="w-10" width="512" height="512" alt="burger illustration"/>
@@ -379,7 +379,7 @@ export default function Menu() {
                     {/* < />!-- Product List --> */}
                     <section className="py-2 bg-gray-100">
                       <div className="mx-auto grid max-w-6xl  grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                            {menuItems
+                            {menuItems.results
                               .map((item) => (
                                 <MenuItem key={item._id} {...item} />
                               ))}

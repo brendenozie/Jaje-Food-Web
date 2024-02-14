@@ -36,7 +36,7 @@ export async function GET() {
   try {
     mongoose.connect(process.env.NEXT_PUBLIC_MONGO_URL);
     const categories = await Category.find();
-    return NextResponse.json(categories, { status: 200 });
+    return NextResponse.json({results: categories}, { status: 200 });
   } catch (error) {
     return NextResponse.json(
       { message: "Something went wrong" },
