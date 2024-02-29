@@ -54,8 +54,8 @@ export default function Hero() {
                             objectFit={"contain"}
                             alt={"salad"}
                           /> */}
-            <motion.h1    whileHover={{ scale: 1.2 }}      >
-                      <img src={"/pizza.png"} className="object-contain h-auto w-full" alt="wath illustration" loading="lazy" width="320" height="280"/>
+            <motion.h1 whileHover={{ scale: 1.2 }}      >
+                      <img src={"/pizza.png"} className="object-contain h-auto w-full rotate-scale-up" alt="wath illustration" loading="lazy" width="320" height="280"/>
             </motion.h1>
             </div>
         </div>

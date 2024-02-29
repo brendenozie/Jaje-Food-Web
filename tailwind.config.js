@@ -10,6 +10,22 @@ module.exports = {
   ],
   theme: {
     extend: {
+        animation: {
+            "rotate-scale-up": "rotate-scale-up 0.7s linear   both"
+        },
+        keyframes: {
+            "rotate-scale-up": {
+                "0%": {
+                    transform: "scale(1) rotateZ(0)"
+                },
+                "50%": {
+                    transform: "scale(2) rotateZ(180deg)"
+                },
+                to: {
+                    transform: "scale(1) rotateZ(360deg)"
+                }
+            }
+        },
       backgroundImage: {
         'hero-pattern': "url('/blackbg.jpg')",
         'fresh-pattern': "url('/fresh.jpg')",

@@ -16,8 +16,11 @@ export async function POST(req) {
       country,
       cartProductsClient,
     } = await req.json();
+
     const session = await getServerSession(authOptions);
+
     const userEmail = session?.user?.email;
+
     mongoose.connect(process.env.NEXT_PUBLIC_MONGO_URL);
 
     const orderDoc = await new Order({
@@ -30,6 +33,8 @@ export async function POST(req) {
       cartProducts: cartProductsClient,
       paid: false,
     }).save();
+
+    return NextResponse.json(orderDoc, { status: 200,message:"Successful" });
 
     const stripeLineItems = [];
     for (const cartProduct of cartProductsClient) {
@@ -54,6 +59,8 @@ export async function POST(req) {
           productPrice += extraThingInfo.price;
         }
       }
+
+
 
       const productName = cartProduct.name;
 
