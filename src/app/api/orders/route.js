@@ -22,14 +22,11 @@ export async function GET(req) {
     }
 
     if (admin) {
-      return NextResponse.json({ body: await Order.find() },
-                          { message: "Something went wrong" },
-                          { status: 500 });
+      return NextResponse.json(await Order.find());
     }
 
     if (userEmail) {
-      return NextResponse.json({ body: await Order.find({ userEmail })},{ message: "Something went wrong" },
-      { status: 500 });
+      return NextResponse.json({ body: await Order.find({ userEmail })},{message: "Something went wrong"}, {status: 500 });
     }
   } catch (error) {
     return NextResponse.json(
