@@ -2,6 +2,7 @@ import { Schema, model, models } from "mongoose";
 
 const orderSchema = new Schema(
   {
+    userName: String,
     userEmail: String,
     phone: String,
     streetAddress: String,
@@ -10,6 +11,11 @@ const orderSchema = new Schema(
     country: String,
     cartProducts: Object,
     paid: { type: Boolean, default: false },
+    couponAmount:String,
+    couponNumber:String,
+    tax:String,
+    totalPrice:String,
+    status:String,
   },
   { timestamps: true }
 );

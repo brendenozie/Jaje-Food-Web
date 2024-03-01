@@ -8,22 +8,29 @@ const stripe = require("stripe")(process.env.STRIPE_SK);
 
 export async function POST(req) {
   try {
-    const {
+    let {
       phone_number,
+      userName,
+      userEmail,
       street_address,
       postal_code,
       city,
       country,
       cartProductsClient,
+      coupon_amount,
+      coupon_number,
+      tax,
+      totalPrice
     } = await req.json();
 
     const session = await getServerSession(authOptions);
 
-    const userEmail = session?.user?.email;
+    userEmail = session?.user?.email?session?.user?.email:userEmail;
 
     mongoose.connect(process.env.NEXT_PUBLIC_MONGO_URL);
 
     const orderDoc = await new Order({
+      userName,
       userEmail,
       phone: phone_number,
       streetAddress: street_address,
@@ -32,6 +39,10 @@ export async function POST(req) {
       country,
       cartProducts: cartProductsClient,
       paid: false,
+      couponAmount:coupon_amount,
+      couponNumber:coupon_number,
+      tax,
+      totalPrice
     }).save();
 
     return NextResponse.json(orderDoc, { status: 200,message:"Successful" });
