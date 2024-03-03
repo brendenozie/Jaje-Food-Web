@@ -15,19 +15,66 @@ export async function GET(req) {
     const url = new URL(req.url);
     const _id = url.searchParams.get("_id");
 
+    const page = url.searchParams.get("page") ? url.searchParams.get("page") : "1";
+
+    const perPage = 10;
+    var skip = page > 1 ? page *perPage : 0;
+
     userEmail = url.searchParams.get("userEmail") ? url.searchParams.get("userEmail") : userEmail;
 
     if (_id) {
-      return NextResponse.json(await Order.findById(_id));
+
+      const count = await Order.countDocuments(_id);
+      var next = page * perPage > count ? 0 : page + 1;
+
+      const orders = await Order.findById(_id).limit(perPage)
+      .skip(skip)
+      .sort({name: 'asc'})
+
+      return NextResponse.json({ body: orders},{message: "Something went wrong"}, {status: 200 }, {info : {
+        count: count,
+        next: next,
+        pages: 10,
+        prev: page-1
+    }});
+
     }
+    
 
     if (admin) {
-      return NextResponse.json(await Order.find());
+
+      const count = await Order.countDocuments();
+      var next = page * perPage > count ? 0 : page + 1;
+
+      const orders = await Order.findById().limit(perPage)
+      .skip(skip)
+      .sort({name: 'asc'});
+
+      return NextResponse.json({ body: orders},{message: "Something went wrong"}, {status: 200 },{info : {
+        count: count,
+        next: next,
+        pages: 10,
+        prev: page-1
+    }});
     }
 
     if (userEmail) {
-      return NextResponse.json({ body: await Order.find({ userEmail })},{message: "Something went wrong"}, {status: 500 });
+
+      const count = await Order.countDocuments({ userEmail });
+      var next = page * perPage > count ? 0 : page + 1;
+
+      const orders = await Order.find({ userEmail }).limit(perPage)
+      .skip(skip)
+      .sort({name: 'asc'})
+
+      return NextResponse.json({ body: orders},{message: "Something went wrong"}, {status: 200 }, {info : {
+        count: count,
+        next: next,
+        pages: 10,
+        prev: page-1
+    }});
     }
+
   } catch (error) {
     return NextResponse.json(
       { message: "Something went wrong" },

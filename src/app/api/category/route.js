@@ -32,11 +32,28 @@ export async function POST(req) {
   }
 }
 
-export async function GET() {
+export async function GET(req) {
   try {
     mongoose.connect(process.env.NEXT_PUBLIC_MONGO_URL);
-    const categories = await Category.find();
-    return NextResponse.json({results: categories}, { status: 200 });
+    const url = new URL(req.url);
+    const page = url.searchParams.get("page") ? url.searchParams.get("page") : "1";
+
+    const perPage = 10;
+    var skip = page > 1 ? page *perPage : 0;//page * (perPage - 1);
+
+    const count = await Category.countDocuments();
+    var next = page * perPage > count ? 0 : page + 1;
+
+    const categories = await Category.find().limit(perPage)
+          .skip(skip)
+          .sort({name: 'asc'});
+
+    return NextResponse.json({results: categories}, { status: 200 },{info : {
+                                count: count,
+                                next: next,
+                                pages: 10,
+                                prev: page-1
+                            }});
   } catch (error) {
     return NextResponse.json(
       { message: "Something went wrong" },
