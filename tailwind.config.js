@@ -33,7 +33,7 @@ module.exports = {
         'footer-texture': "url('/img/footer-texture.png')",
       },
       colors: {
-        primary: "#f26209",
+        primary: "#fb8c00",
         secondary: "#f13a01",
         warning: "#F54180",
       },

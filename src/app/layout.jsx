@@ -27,12 +27,11 @@ export const metadata = {
 };
 
 export default async function RootLayout({ children }) {
-  //const session = await getServerSession();
+  //const session = await getServerSession(); className={`${roboto.className} ${poppins.variable} ${lemon.variable}`
 
   return (
     <html lang="en" className="bg-primary dark:bg-hero-pattern bg-cover scroll-smooth" suppressHydrationWarning={true}>
-      <body className={`${roboto.className} ${poppins.variable} ${lemon.variable}`}
-      >
+      <body >
         <SessionProvider >
           <main className="mx-auto py-4  font-poppins">
             <Providers>

@@ -75,6 +75,16 @@ export async function GET(req) {
     }});
     }
 
+      const count = await Order.countDocuments();
+      var next = page * perPage > count ? 0 : page + 1;
+
+      const orders = await Order.find().limit(perPage)
+      .skip(skip)
+      .sort({name: 'asc'});
+
+      return NextResponse.json(orders);
+    
+
   } catch (error) {
     return NextResponse.json(
       { message: "Something went wrong" },

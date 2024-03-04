@@ -42,7 +42,7 @@ export default function Heeader() {
               className="text-white dark:text-primary font-semibold text-2xl"
               href="/"
             >
-              <img className="w-30 h-24 text-white" src={"/loo.png"} alt="chat logo" loading="lazy" width="128" height="128"/>
+              <img className={`w-30 h-24 text-white`} src={"/loo.png"} alt="chat logo" loading="lazy" width="128" height="128"/>
             </Link>
           </NavbarBrand>
         </NavbarContent>

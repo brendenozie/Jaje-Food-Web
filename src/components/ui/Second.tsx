@@ -15,7 +15,7 @@ const Second = () => {
       <div
         id="about"
         data-testid="about"
-        className="flex flex-col justify-end 2xl:container" >
+        className="flex flex-col justify-end 2xl:container bg-black py-6" >
         <div className="min-h-[7rem]"></div>
         <div className="flex flex-col cont-height gap-y-20 sm:gap-y-28 box-border min-h-[80vh] md:min-h-[50vh]">
           <div className="flex flex-wrap gap-y-6 gap-x-6 justify-center">
