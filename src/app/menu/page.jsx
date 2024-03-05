@@ -364,7 +364,7 @@ export default function Menu() {
 
                     {/* < />!-- Product List --> */}
                     <section className="py-2 bg-gray-100">
-                      <div className="mx-auto grid max-w-6xl  grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                      <div className="mx-auto grid max-w-6xl  grid-cols-2 gap-6 p-6 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
                             {menuItems.results
                               .map((item) => (
                                 <MenuItem key={item._id} {...item} />
