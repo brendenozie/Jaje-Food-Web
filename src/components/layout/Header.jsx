@@ -35,7 +35,7 @@ export default function Heeader() {
         <NavbarContent>
           <NavbarMenuToggle
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            className=" text-white"
+            className="hidden sm:flex text-white"
           />
           <NavbarBrand>
             <Link
