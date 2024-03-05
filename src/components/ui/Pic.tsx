@@ -35,7 +35,7 @@ const Pic = ({categories}: picProps) => {
       className="flex flex-col bg-white h-[45rem] justify-center"
     >
       <div className="min-h-[4.5rem] items-center">
-            <h1 className="relative my-4 mx-2 text-9xl font-bold text-[#B10120] uppercase w-full text-left">Our Menu</h1>
+            <h1 className="relative my-4 mx-2 text-9xl sm:text-6xl font-bold text-[#B10120] uppercase w-full text-left">Our Menu</h1>
       </div>
       <div className="relative">
         <div
@@ -65,7 +65,7 @@ const Pic = ({categories}: picProps) => {
         </button>
       </div>
       <div className="min-h-[4.5rem] items-center">
-            <h1 className="relative my-4 mx-2 text-9xl font-bold text-primary uppercase w-full text-right">Our Menu</h1>
+            <h1 className="relative my-4 mx-2 text-9xl sm:text-6xl font-bold text-primary uppercase w-full text-right">Our Menu</h1>
       </div>
     </section>
   );

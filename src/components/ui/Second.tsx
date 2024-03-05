@@ -15,7 +15,7 @@ const Second = () => {
       <div
         id="about"
         data-testid="about"
-        className="flex flex-col justify-end 2xl:container bg-black py-6" >
+        className="flex flex-col justify-end 2xl:container bg-black p-6" >
         <div className="min-h-[7rem]"></div>
         <div className="flex flex-col cont-height gap-y-20 sm:gap-y-28 box-border min-h-[80vh] md:min-h-[50vh]">
           <div className="flex flex-wrap gap-y-6 gap-x-6 justify-center">
@@ -54,7 +54,7 @@ const Second = () => {
             {/* image */}
             <div className="w-full md:w-[45%]  box-border">
               <div className="bg-[url('/80691.jpg')] h-[20rem] w-full bg-cover bg-center shadow-2xl sm:h-3/4 lg:h-[100%]  relative">
-                <div className="absolute -bottom-4 md:-right-4 sm:right-0 shadow-2xl border-8 border-gray-200">
+                <div className="absolute sm:relative -bottom-4 md:-right-4 sm:right-0 shadow-2xl border-8 border-gray-200 sm:border-gray-900">
                   <Image src={"/80691.jpg"} alt="" width={200} height={50} />
                 </div>
               </div>

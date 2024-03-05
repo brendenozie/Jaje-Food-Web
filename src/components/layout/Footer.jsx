@@ -45,7 +45,7 @@ export default function Footer() {
       <div className="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <p className="font-medium">
-            Company
+            Jajemelo 
           </p>
           <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-100">
             <a className="hover:opacity-75" href> About </a>
@@ -54,7 +54,7 @@ export default function Footer() {
             <a className="hover:opacity-75" href> Careers </a>
           </nav>
         </div>
-        <div>
+        {/* <div>
           <p className="font-medium">
             Services
           </p>
@@ -65,7 +65,7 @@ export default function Footer() {
             <a className="hover:opacity-75" href> HR Consulting </a>
             <a className="hover:opacity-75" href> SEO Optimisation </a>
           </nav>
-        </div>
+        </div> */}
         <div>
           <p className="font-medium">
             Helpful Links

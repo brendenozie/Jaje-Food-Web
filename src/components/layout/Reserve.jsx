@@ -5,7 +5,7 @@ export default function Reserve() {
     <section id="contact" className="py-24 lg:py-36 bg-white overflow-hidden">
           <div className="container px-4 mx-auto">
             <div className="flex flex-wrap -m-8">
-              <div className="w-full md:w-3/12">
+              <div className="w-full md:w-3/12 sm:hidden">
                 <div className="md:max-w-[40rem] absolute z-10 p-40 rounded-full bg-repeat-round bg-italian-pattern">
                   <div className="flex items-center justify-center mb-8 w-20 h-20 rounded-xl" style={{ background: "#000000", backgroundRepeat: "no-repeat", backgroundSize: "100% 100%" }}>
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,7 +18,7 @@ export default function Reserve() {
                   <span className="text-white">Founder, Jajemelo.</span>
                 </div>
               </div>
-              <div className="w-full md:w-8/12 z-20 relative rounded-l-full pl-72 pt-24 bg-repeat-round pr-16 bg-fresh-pattern">
+              <div className="w-full md:w-8/12 z-20 relative rounded-l-full sm:rounded-none pl-72 sm:pl-14 pt-24 bg-repeat-round pr-16 bg-fresh-pattern pb-4">
                 <div className="flex flex-wrap -m-3">
                   <div className="w-full md:w-1/2 p-3">
                     <label className="block">

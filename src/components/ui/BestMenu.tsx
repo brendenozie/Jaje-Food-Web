@@ -40,7 +40,7 @@ const BestMenu = ({categories,menuitems}: picProps) => {
             <h2 className="relative my-4 mx-2 text-3xl font-bold text-[#B10120] uppercase w-full text-center font-poppins">Our Best Foods Menu</h2>
       </div>
 
-      <div className="mt-16 grid border divide-x divide-y rounded-xl overflow-hidden sm:grid-cols-2 lg:divide-y-0 lg:grid-cols-5 xl:grid-cols-5 text-center object-center items-center justify-items-center max-w-5xl ">
+      <div className="mt-16 grid border divide-x divide-y rounded-xl overflow-hidden sm:grid-row lg:divide-y-0 lg:grid-cols-5 xl:grid-cols-5 text-center object-center items-center justify-items-center max-w-5xl ">
             {categories.results.map((card) => (
                 <div key={card._id} className="relative group transition hover:z-[1] hover:shadow-2xl w-full border-e-[1px] border-dashed dark:border-white/20">
                     <div className="relative p-2 space-y-2  flex flex-col items-center transition duration-300 group-hover:bg-white group-hover:border group-hover:scale-90 ">
@@ -55,7 +55,7 @@ const BestMenu = ({categories,menuitems}: picProps) => {
         </div>
 
       <div className="p-8">
-            <div className="grid grid-cols-2 gap-4 items-center rounded-md border-[1px] border-gray-200 bg-white bg-clip-border border-[#23232333] dark:!bg-navy-800 dark:text-white ">
+            <div className="grid sm:grid-flow-row grid-cols-2 sm:grid-cols-1 gap-4 items-center rounded-md border-[1px] border-gray-200 bg-white bg-clip-border border-[#23232333] dark:!bg-navy-800 dark:text-white ">
             {menuitems.results.map((menuitem) => (
                 <div key={menuitem._id} className="flex h-full items-start justify-between rounded-md border-b-[1px]  dark:border-white/20 bg-white px-3 py-[20px] transition-all duration-150 border-gray-200 dark:!bg-navy-800 dark:hover:!bg-navy-700">
                     <div className="flex items-center gap-3">

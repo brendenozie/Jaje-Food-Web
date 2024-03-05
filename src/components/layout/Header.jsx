@@ -35,7 +35,7 @@ export default function Heeader() {
         <NavbarContent>
           <NavbarMenuToggle
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            className="sm:hidden text-white"
+            className=" text-white"
           />
           <NavbarBrand>
             <Link
@@ -48,7 +48,7 @@ export default function Heeader() {
         </NavbarContent>
         {menuItems.map((item) => (
           <NavbarContent
-            className="hidden sm:flex gap-4"
+            className="sm:hidden md:flex gap-4"
             justify="center"
             key={item.title}
           >
