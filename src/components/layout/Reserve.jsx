@@ -13,9 +13,9 @@ export default function Reserve() {
                       <path d="M21 16C21 18.7614 18.7614 21 16 21C13.2386 21 11 18.7614 11 16C11 13.2386 13.2386 11 16 11C18.7614 11 21 13.2386 21 16Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </div>
-                  <h3 className="mb-6 text-sm font-semibold" style={{ letterSpacing: "-0.5px" }}>&ldquo;At Jajemelo well help you plan your trip effectively&amp; productively. Ensuring that you have a seamless holiday even as you travel with us touring all the places of interest !&rdquo;</h3>
-                  <h4 className="font-semibold tracking-tight mb-1">Jajemelo</h4>
-                  <span>Founder, Jajemelo.</span>
+                  <h3 className="mb-6 text-sm font-semibold text-white" style={{ letterSpacing: "-0.5px" }}>&ldquo;At Jajemelo well help you plan your trip effectively&amp; productively. Ensuring that you have a seamless holiday even as you travel with us touring all the places of interest !&rdquo;</h3>
+                  <h4 className="font-semibold tracking-tight mb-1 text-white">Jajemelo</h4>
+                  <span className="text-white">Founder, Jajemelo.</span>
                 </div>
               </div>
               <div className="w-full md:w-8/12 z-20 relative rounded-l-full pl-72 pt-24 bg-repeat-round pr-16 bg-fresh-pattern">

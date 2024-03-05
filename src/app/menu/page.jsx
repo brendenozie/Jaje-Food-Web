@@ -5,12 +5,14 @@ import Loading from "@/app/loading";
 import Error from "@/app/error";
 import { useCategories } from "@/Hooks/useCategories";
 import { useMenuItems } from "@/Hooks/useMenuItems";
+
 export default function Menu() {
   const {
     categories,
     error: catError,
     isLoading: catIsLoading,
   } = useCategories();
+  
   const {
     menuItems,
     error: MenuError,
@@ -195,34 +197,18 @@ export default function Menu() {
                     <div>
                         <h3 class="text-xl text-gray-800 mb-3 uppercase font-medium">Categories</h3>
                         <div class="space-y-2">
-                            <div class="flex items-center">
-                                <input type="checkbox" name="cat-1" id="cat-1"
+                        {categories.results?.length > 0 &&  categories.results.map((c) => (
+                            <div class="flex items-center" key={c._id}>
+                                <input type="checkbox" name="cat-1" id={c.id}
                                     class="text-primary focus:ring-0 rounded-sm cursor-pointer"/>
-                                <label for="cat-1" class="text-gray-600 ml-3 cusror-pointer">Bedroom</label>
-                                <div class="ml-auto text-gray-600 text-sm">(15)</div>
+                                <label for="cat-1" class="text-gray-600 ml-3 cusror-pointer">{c.name}</label>
+                                {/* <div class="ml-auto text-gray-600 text-sm">{c.info.count}</div> */}
                             </div>
-                            <div class="flex items-center">
-                                <input type="checkbox" name="cat-2" id="cat-2"
-                                    class="text-primary focus:ring-0 rounded-sm cursor-pointer"/>
-                                <label for="cat-2" class="text-gray-600 ml-3 cusror-pointer">Sofa</label>
-                                <div class="ml-auto text-gray-600 text-sm">(9)</div>
-                            </div>
-                            <div class="flex items-center">
-                                <input type="checkbox" name="cat-3" id="cat-3"
-                                    class="text-primary focus:ring-0 rounded-sm cursor-pointer"/>
-                                <label for="cat-3" class="text-gray-600 ml-3 cusror-pointer">Office</label>
-                                <div class="ml-auto text-gray-600 text-sm">(21)</div>
-                            </div>
-                            <div class="flex items-center">
-                                <input type="checkbox" name="cat-4" id="cat-4"
-                                    class="text-primary focus:ring-0 rounded-sm cursor-pointer"/>
-                                <label for="cat-4" class="text-gray-600 ml-3 cusror-pointer">Outdoor</label>
-                                <div class="ml-auto text-gray-600 text-sm">(10)</div>
-                            </div>
+                            ))}
                         </div>
                     </div>
 
-                    <div class="pt-4">
+                    {/* <div class="pt-4">
                         <h3 class="text-xl text-gray-800 mb-3 uppercase font-medium">Brands</h3>
                         <div class="space-y-2">
                             <div class="flex items-center">
@@ -256,7 +242,7 @@ export default function Menu() {
                                 <div class="ml-auto text-gray-600 text-sm">(10)</div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                     <div class="pt-4">
                         <h3 class="text-xl text-gray-800 mb-3 uppercase font-medium">Price</h3>
@@ -271,7 +257,7 @@ export default function Menu() {
                         </div>
                     </div>
 
-                    <div class="pt-4">
+                    {/* <div class="pt-4">
                         <h3 class="text-xl text-gray-800 mb-3 uppercase font-medium">size</h3>
                         <div class="flex items-center gap-2">
                             <div class="size-selector">
@@ -325,7 +311,7 @@ export default function Menu() {
                             </div>
 
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
             </div>
@@ -334,7 +320,7 @@ export default function Menu() {
               {/* < />!-- Tab Menu --> */}
               <div className="flex flex-wrap items-center overflow-x-auto overflow-y-hidden py-10 justify-center bg-white text-gray-800">
                       <div className="mt-8 grid border divide-x divide-y rounded-xl overflow-hidden sm:grid-cols-2 lg:divide-y-0 lg:grid-cols-5 xl:grid-cols-5 text-center object-center items-center justify-items-center max-w-5xl ">
-                      {categories.results?.length > 0 &&  categories.map((c) => (
+                      {categories.results?.length > 0 &&  categories.results.map((c) => (
                           <div className="relative group transition hover:z-[1] hover:shadow-2xl w-full" key={c._id}>
                               <div className="relative p-2 space-y-2  flex flex-col items-center   border-dashed rounded-lg transition duration-300 group-hover:bg-white group-hover:border group-hover:scale-90 ">
                                   <img src={c.image} className="w-10" width="512" height="512" alt="burger illustration"/>

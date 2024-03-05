@@ -90,7 +90,7 @@ export default function Footer() {
       </div>
     </div>
     <p className="mt-8 text-xs text-gray-100">
-      © 2024 Comany Name
+      © 2024 Jajemelo
     </p>
   </div>
 </footer>

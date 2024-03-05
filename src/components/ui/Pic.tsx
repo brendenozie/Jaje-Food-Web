@@ -4,7 +4,11 @@ import { picardData } from "@/constant/Data";
 import {ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import Picard from "./Picard";
 
-const Pic = () => {
+interface picProps {
+  categories: any;
+}
+
+const Pic = ({categories}: picProps) => {
   const scrollContainer = useRef<HTMLDivElement>(null);
 
   const scrollLeft = () => {
@@ -28,7 +32,7 @@ const Pic = () => {
     <section
       id="destinations"
       data-testid="destinations"
-      className="flex flex-col bg-white h-[42rem] justify-center"
+      className="flex flex-col bg-white h-[45rem] justify-center"
     >
       <div className="min-h-[4.5rem] items-center">
             <h1 className="relative my-4 mx-2 text-9xl font-bold text-[#B10120] uppercase w-full text-left">Our Menu</h1>
@@ -38,11 +42,11 @@ const Pic = () => {
           className="p-8 grid grid-flow-col auto-cols-[100%] md:auto-cols-[50%] lg:auto-cols-[25%] overflow-hidden overscroll-y-contain snap-x snap-mandatory scroll-pl-2 scrollbar-hide"
           ref={scrollContainer}
         >
-          {picardData.map((card) => (
+          {categories.results.map((card) => (
             <Picard
-              key={card.id}
-              src={card.src}
-              title={card.title}
+              key={card._id}
+              src={card.image}
+              title={card.name}
               desc={card.desc}
             />
           ))}
@@ -61,7 +65,7 @@ const Pic = () => {
         </button>
       </div>
       <div className="min-h-[4.5rem] items-center">
-            <h1 className="relative my-6 mx-2 text-9xl font-semibold text-primary uppercase w-full text-right">Our Menu</h1>
+            <h1 className="relative my-4 mx-2 text-9xl font-bold text-primary uppercase w-full text-right">Our Menu</h1>
       </div>
     </section>
   );

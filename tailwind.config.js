@@ -9,6 +9,12 @@ module.exports = {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    // screens:{
+    //     sm : '480px',
+    //     md : '768px',
+    //     lg : '976px',
+    //     xl : '1440px'
+    //   },
     extend: {
         animation: {
             "rotate-scale-up": "rotate-scale-up 0.7s linear   both"
@@ -29,7 +35,7 @@ module.exports = {
       backgroundImage: {
         'hero-pattern': "url('/blackbg.jpg')",
         'fresh-pattern': "url('/fresh.jpg')",
-        'italian-pattern': "url('/italian.png')",
+        'italian-pattern': "url('/pizz.png')",
         'footer-texture': "url('/img/footer-texture.png')",
       },
       colors: {

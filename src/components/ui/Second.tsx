@@ -24,8 +24,8 @@ const Second = () => {
                 <h2 className="text-3xl font-bold text-white md:text-4xl lg:text-5xl ">
                   WHERE QUALITY FOOD MEETS EXCELLENT SERVICE
                 </h2>
-                <p className="lg:text-lg text-white">
-                Its the perfect dining experience where every dish is crafted with fresh,high quality ingredientsand served by friendly staff who go the extra mile to ensure seemless service.
+                <p className="lg:text-lg text-primary">
+                Its the perfect dining experience where every meal is crafted with fresh,high quality ingredients and served by friendly staff who go the extra mile to ensure seemless service.
                 </p>
               </div>
               <div className="flex gap-x-4">
@@ -33,20 +33,19 @@ const Second = () => {
                   href="#"
                   className="px-4 py-[0.6rem] py-3 px-6 bg-gray-700 text-white hover:bg-gray-800 transition-all duration-300"
                 >
-                  Discover awesome places
+                  Awesome Quality, Awesome Food
                 </Link>
                 <Link
-                  href=""
+                  href="/menu"
                   className="px-4 py-[0.6rem] py-3 px-6 border-[1px] text-white border-gray-400 hover:border-gray-800 border-opacity-40 hover:border-opacity-100 transition-all duration-200"
                 >
-                  View our packages
+                  View our menu
                 </Link>
               </div>
               <div className="bg-gray-200 p-4">
                 <p>
-                  Interested in Travel to be your travel companion on your special
-                  moment? Get in touch with our team at{" "}
-                  <Link href="$contact" className="text-white underline">
+                  Make an inquiry? Get in touch with our team at{" "}
+                  <Link href="$contact" className="text-primary underline">
                     jajemelo@gmail.com
                   </Link>
                 </p>
@@ -69,7 +68,7 @@ const Second = () => {
                   <h3 className="text-3xl sm:text-[2rem] leading-8 font-bold text-white text-4xl">
                     1.4M
                   </h3>
-                  <p className="text-white">travellers month</p>
+                  <p className="text-white">plates\month</p>
                 </div>
               </div>
               <div className="flex items-start gap-x-3">
